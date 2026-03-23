@@ -10,7 +10,7 @@ It occurs to me that I should probably explain what is going to be in the first 
 
 -An accompanying client key creator/client package generator that produces an (optionally) passphrase-encrypted package that can be run in standard user mode on Windows machines. The package includes portable SSH binaries and a custom RDP connect file. The only installation required involves the user approving addition of the RDP server's leaf certificate to the user store to allow enforced auth of the RDP server without (hopefully) the user needing to see/deal with message box prompts.
 
-Of note, other than RDP server certificate pinning being enforced there will be no necessary changes to how you use RDP itself. Whatever setup you have in place can remain in place. (However, currently I'm only pursuing compatibility with scenarios that have NLA on.)
+Of note, other than RDP server certificate pinning being enforced there will be no required changes to how you use RDP itself. An initial goal is that whatever RDP setup you have in place can largely remain in place if you so choose. However, some RDP configurations may be more compatible with tunneling than others. (Also, currently I'm only pursuing compatibility with scenarios that have NLA on.)
 
 
 03/23/2026 Project Update:
