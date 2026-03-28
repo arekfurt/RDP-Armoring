@@ -1,3 +1,9 @@
+
+03/28/2026 Update:
+
+At just before 7:00am EDT this morning the first real end-to-end test of Secure RDP SSH/RDP protection mode succeeded. 
+
+
 03/27/2026
 
 At the point where I have begun doing--or at least attempting--end-to-end tests of user flows. In other words, one flow might be starting the software-->evaluating & confirming what the dashboard says about current posture-->installing & configuring the SSH/RDP protection mode--->generating first client/user packages-->decrypting and running a package on client-->connecting-->actually using RDP to do stuff. (Also in other tests checking things like uninstall/revert mechanisms and post-install configuration & management options.)
