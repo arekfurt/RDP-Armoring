@@ -1,6 +1,6 @@
 
-## SecureRDP initial public testing/dev/alpha release - Version 0.85 ##
-#### March 31, 2026 ####
+# SecureRDP initial public testing/dev/alpha release - Version 0.85 #
+#### released: March 31, 2026 ####
 
 
 ## What is SecureRDP, and why should anyone care? ##
@@ -15,8 +15,20 @@ Simply put, SecureRDP tries to make it much easier to understand and improve RDP
 
 -------------------------------------
 
+## Getting Started + An Important Notice ##
 To get started:
 Unzip the archive and find the file ServerWizard.ps1 in the root of the folder. Right-click on it, click "run as Powershell", and make your way through the expected security dialogs. You'll see a welcome screen on first-launch that will direct you onward.
+
+### Notice: ###
+
+I'm happy to have the interest of anyone thinking of trying out SecureRDP v.0.85, but before you actually do please understand the following:
+
+This first release is primarily intended for folks who want to help me find breaking bugs (I'm one guy, without access to a serious enterprise testing environment that I can use for personal projects.) and those who want to give me feedback at a early phase in the software's life (when that feedback can have the most impact). It is not intended for day-to-day use at this point. If you try it, you will find bugs. It is only about the severity of the bugs, and whether they are already on the list of the project's Known Issues for .85.(Please check that before filing bug reports in the Issues area.)
+
+To be totally clear:
+DO NOT USE THIS VERSION OF THE SOFTWARE IN PRODUCTION. DO NOT USE IT ON ANY MACHINES THAT YOU NEED TO REMAIN OPERATIONAL, OR THAT HOST UNBACKED-UP IMPORTANT DATA.
+
+----------------------------------
 
 ### Known Issues ###
 
