@@ -40,8 +40,9 @@ DO NOT USE THIS VERSION OF THE SOFTWARE IN PRODUCTION. DO NOT USE IT ON ANY MACH
 
 -After you create a new client key and package, the center SSH mode tile on the dashboard may still show an error message in red saying that it can't find any authorized keys. Tap the Manage button to be taken to the SSH mode management page and confirm whether the key has actually been created.
 
--There are numerous points where the UI needs some fixes and polishing.
+-Unfortunately, version 0.85 is not compatible with Constrained Language Mode.  Add-Type is currently used in a number of places. CLM compatibilty is important to me, but I made a decision that making it happen for 0.85 would have delayed initial release too substantially to be worth it at this stage. I have actively tried to minimize use of non-compliant mechanisms, however, in hopes it will be reasonably achieveable sooner vs later.  
 
+-There are, not surprisingly, numerous points where the UI needs some fixes and polishing.
 
 -The initial public build does not contain certificate pinning functionality on the client to ensure the RDP server tunnel is strongly authenticated, nor to suppress user-facing warnings about untrusted RDP connections. Both are high priorities, but the SecureRDP implementations needed to be held back for more consideration. (The SSH tunnel still provides crypto mutual auth.)
 See the pre-release updates file for more info on planned features that did not quite make the first public build.
