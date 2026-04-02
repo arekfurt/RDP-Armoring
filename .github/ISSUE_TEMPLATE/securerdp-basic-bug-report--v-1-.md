@@ -7,7 +7,11 @@ assignees: ''
 
 ---
 
-# SecureRDP Bug Report
+# SecureRDP Bug Report 
+___________________________________________
+### Important Note: If you want to report a security vulnerability do not do that here. Instead, go to the security advisories page and use the private vulnerability reporting option. ###
+https://github.com/arekfurt/SecureRDP/security/advisories
+___________________________________________
 
 ## Bug Summary
 [Provide a brief description of the issue]
