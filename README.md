@@ -1,5 +1,12 @@
-# RDP Armoring (RDPA) testing/dev/alpha release - Version 0.86 #
-#### Released: April 7, 2026 ####
+# RDP Armoring (RDPA) testing/dev/alpha release - Version 0.86 
+released April 07, 2026
+--------------------------------
+
+04/07 Update:
+
+After a first initial public release with version 0.85 last Tuesday and a project renaming event involving 0.851 build on Saturday, I'm pleased today to present a more capable, more fleshed out, hopefully somewhat less buggy v. 0.86.  
+
+Aside from a number of bug fixes that have accumulated over the last week, this build includes the encrypted client package generator to protect keys and config files with secure generated passphrases that I had originally very much hoped to include with 0.85. Additionally, and perhaps even more notably, I have started building the first elements into what is now-named RDPA to enable upgrading from one build to another while bringing along your configuration state with you in a well-supported way. (From now onward, on first run of a new build on a test system that already has a previous build from 0.86 or higher installed on it RDPA should ask you if you want "take over the existing instance" to give control of it to your new build folder. Or you can use the manual import configuration files from another RDPA project version.) Moreover, the firewall rule risk widget has had some improvements fixing some of its more significant tendencies towards overstating exposure to different kinds of network traffic.
 
 ## Getting Started + An Important Notice ##
 To get started:
