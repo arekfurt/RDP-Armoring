@@ -1,23 +1,38 @@
 # RDP Armoring (RDPA) testing/dev/alpha release - Version 0.86 
-released April 07, 2026
 --------------------------------
 
-04/07 Update:
+### What is RDPA? ###
+
+Simply put, RDPA (RDP Armoring) is about making highly secure remote desktop access easy to achieve for Windows-using organizations and individuals and at no additional cost beyond the OS itself using proven technologies that are maintained and serviced as part of Windows.
+
+RDPA seeks to make using RDP much more secure than it is as it is today most commonly configured and employed. It does this by placing RDP in an outer tunnel that uses mutual cryptographic authentication, protecting RDP from essentially all real-world tactics employed by attackers against it. RDPA requires no installation of any third-party code to handle that (meaning: it just configures and monitors Windows components) or any connection to cloud services. 
+
+Anyway, that's the concept.
+
+Currently, RDPA is in a late alpha/early beta phase of development. It supports protecting RDP with an outer SSH tunnel that uses public key mutual auth and hardened client and server configurations.
+
+#### 04/07/2026 Update: ####
 
 After a first initial public release with version 0.85 last Tuesday and a project renaming event involving 0.851 build on Saturday, I'm pleased today to present a more capable, more fleshed out, hopefully somewhat less buggy v. 0.86.  
 
 Aside from a number of bug fixes that have accumulated over the last week, this build includes the encrypted client package generator to protect keys and config files with secure generated passphrases that I had originally very much hoped to include with 0.85. Additionally, and perhaps even more notably, I have started building the first elements into what is now-named RDPA to enable upgrading from one build to another while bringing along your configuration state with you in a well-supported way. (From now onward, on first run of a new build on a test system that already has a previous build from 0.86 or higher installed on it RDPA should ask you if you want "take over the existing instance" to give control of it to your new build folder. Or you can use the manual import configuration files from another RDPA project version.) Moreover, the firewall rule risk widget has had some improvements fixing some of its more significant tendencies towards overstating exposure to different kinds of network traffic.
 
 ## Getting Started + An Important Notice ##
-To get started:
+
+#### Requirements: ####
+A Windows 10 or 11 machine of Pro SKU or higher to act as the server you want to allow remote access to. 
+
+Also note that for the present time use of NTLM2 must be allowed for connecting via RDP to the server, as unfortunately Windows does not yet support Kerberos use with an SSH tunnel. (RDPA options beyond SSH tunneling are coming.) Additionally, either Windows needs to be able to reach Windows Update online infrastructure to download and install the OpenSSH server optional feature or you must install this yourself using your own configuration/deployment tools or manual means.
+
+#### To get started: ####
 On a Windows 10 or 11 test machine (Pro SKU or above) that will act as the RDP server that you want to enable more secure access to, unzip the RDP-Armoring archive and find the file ServerWizard.ps1 in the root of the folder. Right-click on it, click "Run with PowerShell", and make your way through the expected security dialogs. You'll see a welcome screen on first launch, and then you'll be taken to the main status dashboard. Clicking the Quick Start tile on the left will launch a wizard that will walk you through the process of installing and configuring needed SSH server components and generating your first client key and connection package. Make sure to note the generated passphrase that appears on-screen; it protects the private key and configuration info in the archive and you will need it to connect. Move the client package zip archive to a test client machine, extract and open the folder, and doubleclick the setup shortcut file. When prompted enter the passphrase, and wait while the SSH tunnel is established and the RDP client is started. Then connect via RDP as you normally would. (Note: The field showing the computer address to be connected to will say "localhost" or "127.0.0.1.")
 
 
 ### Notice: ###
 
-I'm happy to have the interest of anyone thinking of trying out RDP-Armoring v0.851, but before you actually do please understand the following:
+I'm happy to have the interest of anyone thinking of trying out RDPA, but before you actually do please understand the following:
 
-This first release is primarily intended for folks who want to help me find breaking bugs (I'm one guy, without access to a serious enterprise testing environment that I can use for personal projects) and those who want to give me feedback at an early phase in the software's life (when that feedback can have the most impact). It is not intended for day-to-day use at this point. If you try it, you will find bugs. It is only about the severity of the bugs, and whether they are already on the list of the project's Known Issues for v0.851. (Please check that before filing bug reports in the Issues area.)
+This release is primarily intended for folks who want to help me find bugs (I'm one guy, without access to a serious enterprise testing environment that I can use for personal projects.) and to provide feedback for improvements. It is not intended for day-to-day use at this point. If you try it, you should expect that you may very well find some bugs. Perhaps even in the functioning of major/core features. I would greatly appreciate it if you would file a bug report for any significant/breaking problems, (Please check the Known Issues area of this readme before filing.) Indeed, you are welcome to file an Issue even if you experience no significant difficulties at all, for even that provides very valuable info for me to have at this stage.
 
 To be totally clear:
 DO NOT USE THIS VERSION OF THE SOFTWARE IN PRODUCTION. DO NOT USE IT ON ANY MACHINES THAT YOU NEED TO REMAIN OPERATIONAL, OR THAT HOST UNBACKED-UP IMPORTANT DATA.
