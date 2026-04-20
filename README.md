@@ -1,4 +1,5 @@
-# RDP Armoring (RDPA) testing/alpha release - Version 0.87 
+# RDP Armoring (RDPA) testing/alpha release - Version 0.87 #
+##### (released: 04/19/2026) #####
 --------------------------------
 
 ### What is RDPA? ###
