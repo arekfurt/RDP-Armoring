@@ -1,7 +1,18 @@
-# RDP Armoring (RDPA) testing/alpha release - Version 0.87 #
-##### (released: 04/19/2026) #####
+# RDP Armoring (RDPA) testing/alpha release - Version 0.871 #
+##### (released: 04/23/2026) #####
 --------------------------------
+## RDPA Security Bulletin ##
+(04/23/2026)
 
+Versions of RDPA (formerly SecureRDP) 0.87 and below contain a security attack exposure analysis widget that is/was intended to detect if the host machine was actually receiving traffic from the public Intenet on its RDP port/s. Analysis has found that due to a design flaw this widget mistakenly reported that no traffic from the Internet was reaching those ports when in fact Internet RDP traffic might have been being recieved and processed.
+
+Impact: In theory, someone who had RDP enabled and local firewall rules on their machine that were set to allow RDP connections from any source while mistakenly believing that offboard controls would prevent Intenet traffic from reaching their machine would have had that false belief confirmed instead of contradicted had they used information from the off-by-default widget. And possibly been less likely to take vital setps to secure their machine from attack over the Internet. 
+
+Fix: Release 0.871 disables the faulty widget. It will be redesigned and reincluded in a future release.
+
+#### Reminder: RDPA is currently test/alpha stage software. It should not be used in production environments. #### 
+
+_____________________________
 ### What is RDPA? ###
 
 Simply put, RDPA (RDP Armoring) is about making highly secure remote desktop access easy to achieve for Windows-using organizations and individuals, at no additional cost beyond the OS itself. Using proven technologies that are maintained and serviced as part of Windows.
