@@ -1,6 +1,37 @@
 # RDP Armoring (RDPA) testing/alpha release - Version 0.871 #
 ##### (released: 04/23/2026) #####
 --------------------------------
+
+## June 06 Project Status Update ##
+
+So, allow me to relay a mix of good news and bad news:
+
+Good news: This project is very much alive, despite the (decidedly not pre-planned) lengthy span of time since the last public build release. Indeed, I'm still probably spending on average about 15 hours a week working on it right now. Some weeks quite a bit more.
+
+So, why the delay? The short answer: I've substantially increased my Quality Assurance standards for shipping new code publicly, have been aggressively going after technical debt I incurred while not having better QA standards previously, have invested quite a lot of time and effort into figuring out how to better bend Claude to my will in service of preventing problems before they get written into code, and have done quite a bit of refactoring and redesign work in general.
+
+Bad news (sort of): The vast majority of the refactoring/rearchitecting work has been under-the-hood work. There have been some significant feature and UI improvements made in my internal builds, but not what I would really want typically for six weeks worth of work.
+
+Good news: My improved QA processes and greater efforts to test and scrutinize how well RDPA's features actually work have uncovered a lot of problems I did not know existed. And I have made a good start on addressing them and getting the project in better shape.
+
+Bad news: My improved QA processes and greater efforts to test and scrutinize how well RDPA's features actually work have uncovered a lot of problems I did not know existed. And I have only made a good start on addressing them and getting the project in better shape.
+
+Good news: I actually have a decent roadmap of what I intend to ship in the coming few public releases:
+
+-0.872: Much improved and now actually functional attack surface analysis widget. Significant dashboard UI improvements. A mechanism for updating/transferring control from an old version of the software to a new version that actually (at least mostly) works. Firewall exposure analyzer improvements that should make it accurate in multiple RDP port and PortProxy scenarios. Under-the-hood security improvements.
+
+-0.873: Near-complete rebuild of firewall rule handling and RDP listener restriction capabilities. New RDP firewall lockdown options. Further improvements in update/build migration experience as more elements of my comprehensive rearchitecting of that get put in place.
+
+-0.874: Reworking of setup/configuration wizard flows and functionalities to better allow admins to immediately understand their situation, needs, and options and make informed decisions about how quickly they can move to more secure RDP use without causing disruptions of legitimate access. Important under-the-hood refactoring to prepare project for a new phase of major feature additions.
+
+Bad news: The next public release, 0.872, will actually have quite a bit of "existing" functionality disabled. I put existing in quotes because testing and analysis have revealed there are major problems with the features involved, such that their effectiveness is partly or even mostly undermined.
+
+Good news and bad news: Improvements are happening, just behind the scenes and more slowly than I would like.
+
+0.872 will ship publicly when... well, when my QA bar for it is hit. That could be this weekend, could be a week or two from now. (Hopefully not, but I've learned lately that I didn't understand very well what the quality state of my codebase was. And I am still trying to get a really good, confident handle on it.)
+
+--------------------------------
+
 ## RDPA Security Bulletin ##
 (04/23/2026)
 
