@@ -1,6 +1,23 @@
 # RDP Armoring (RDPA) testing/alpha release - Version 0.871 #
 ##### (released: 04/23/2026) #####
 --------------------------------
+## August 22 Project Update ##
+
+After an extended (and not initially intended) period of not shipping anything publicly, I've made a significant decision about the near-future of this project. I am splitting development into two lines of work, one intended to produce a beta-quality public release in the coming days, the other focusing on building major feature additions and architectural changes.
+
+The essential tension that has led to there not being a public release since June is that I have been simultaneously attempting to improve RDPA code quality and reliability while also crafting major new features and implementing considerable architectural improvements. It has finally occurred to me that pursuing that strategy is fundamentally incompatible with an objective of getting a decent-quality release shipped that people will actually want to test and even use for (non-critical) day-to-day scenarios anytime soon. So, I've decided to essentially split work for at least the next few months into two tracks.
+
+The more important of these tracks for purposes of description here involves producing a series of pre-beta and then beta quality releases of a program with less ambitious functionality. This will essentially aim to do what the presently available release (0.871) does today--tunnel RDP through SSH--but with a few substantial feature additions (which are basically built at this point) and a large number of smmaller refinements and improvements of all kinds. Importantly, this approach will also let me take best advantage of the very substantial amount of testing and Quality Assurance work I have done regarding the core features of RDPA over the last few months.
+
+The tradeoff is that some things that I very much want to get into RDPA won't be in these releases. IPSec mode, for example, won't be in them. And these releases will be optimized/intended for users who have a single-port RDP setup. Kerberos authentication for RDP is quite unlikely to work, due to limitations in Windows concerning SSH tunneling and the lack of an IPSec mode. And so on.
+
+On the other hand, the core experience of getting RDP better secured inside a tunnel that requires mutual cryptographic authentication at no cost, with no online dependencies, and with a minimum of effort and disruption will receive maximum focus. And work on major new capabilities does continue and will continue behind the scenes.
+
+More soon.
+
+_____________________________________
+
+
 
 ## June 06 Project Status Update ##
 
